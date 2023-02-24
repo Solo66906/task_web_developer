@@ -1,0 +1,91 @@
+body {
+  background-color: #000;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.wrapper {
+  width: 1194px;
+  margin: 0 auto;
+}
+
+.header_content {
+  margin-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header_content .section .section_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header_content .section .section_list .section_item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #959595;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+}
+.header_content .section .section_list .section_item:hover {
+  font-weight: 700;
+  color: #fff;
+  background: #2C2C2E;
+}
+.header_content .section .section_list .plus img {
+  width: 30px;
+  height: 30px;
+}
+.header_content .shop {
+  width: 354px;
+  height: 41px;
+  background: #2C2C2E;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.header img {
+  height: 8.5px;
+  margin-top: 27.5px;
+  margin-right: 22.5px;
+}
+.header .head_text p {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: #959595;
+}
+.header .head_text h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  color: #F3F3F8;
+}
+.header .dots {
+  margin-top: 27.5px;
+  margin-left: 23px;
+  height: 10px;
+  border: 1.5px dashed #959595;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
