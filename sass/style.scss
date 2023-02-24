@@ -1,3 +1,9 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 body {
     background-color: #000;
     font-family:'SF Pro Display', sans-serif;
@@ -38,17 +44,66 @@ body {
             }
         }
     }
-    .shop {
-        width: 354px;
-        height: 41px;
-        background: #2C2C2E;
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        .dropbtn{
+            width: 354px;
+            height: 41px;
+            background: #2C2C2E;
+            border-radius: 8px;
+            border: 0px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+
+            width: 100%;
+            background: #2C2C2E;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 0px 0px 8px 8px;
+            padding: 15px;
+            .search{
+                display: flex;
+                align-items: center;
+                padding: 7px 8px;
+                border: 0px;
+                width: 323px;
+                height: 36px;
+                color: #FFFFFF;
+                background: rgba(118, 118, 128, 0.24);
+                border-radius: 10px;
+                input{
+                    background: rgba(118, 118, 128, 0);
+                    border: 0px;
+                    width: 100%;
+                    color: #FFFFFF;
+                }
+            }
+            a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            a:hover {background-color: #ddd;}
+        }
+        .dropbtn:hover, .dropbtn:active { 
+            border-radius: 8px 8px 0px 0px;
+        }
+        .dropdown-content a:hover {background-color: #ddd;}
     }
+
+    .dropdown:hover .dropdown-content {display: block;}
 }
 .header {
     display: flex;
     color: #fff;
     margin-bottom: 12px;
+    margin-top: 20px;
     img {
+        margin-left: 8.5px;
         height: 8.5px;
         margin-top: 27.5px;
         margin-right: 22.5px;
@@ -73,5 +128,86 @@ body {
         height: 10px;
         border: 1.5px dashed #959595;
         transform: rotate(90deg);
+    }
+}
+.shop {
+    .shop_card {
+        display: flex;
+        .card_item {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 16px;
+            width: 157px;
+            height: 198px;
+            background: #1C1C1E;
+            border-radius: 8px;
+            color: #FFFFFF;
+            h3 {
+                margin: 10px 0px;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 14px;
+            }
+            p {
+                width: 100%;
+                font-weight: 700;
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+        .card_item_none {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 16px;
+            width: 157px;
+            height: 198px;
+            border: 2px solid #1C1C1E;
+            border-radius: 8px;
+            color: #FFFFFF;
+        }
+    }
+}
+.whiskey {
+    .header {
+        img {
+            margin-top: 23px;
+            margin-right: 27px;
+            margin-left: 12px;
+            height: 17px;
+        }
+    }
+}
+footer {
+    background: rgba(22, 22, 22, 0.94);
+    box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    margin-top: 52px;
+    .wrapper {
+        .tab_list {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 59px;
+            .list_item {
+                display: flex;
+                align-items: center;
+                color: #959595;
+                img {
+                    margin-right: 12px;
+                }
+            }
+            .list_item:nth-child(3) {
+                img {
+                    margin-right: 0px;
+                }
+            }
+            .active {
+                color: #AC8E68;
+            }
+        }
     }
 }
